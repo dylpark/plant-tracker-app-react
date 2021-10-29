@@ -1,7 +1,7 @@
 //
 //
 
-export default function Plants(props) {
+function Plants(props) {
   return (
     <div>
       <img src={props.img} />
@@ -11,3 +11,5 @@ export default function Plants(props) {
     </div>
   );
 }
+
+export default Plants;
