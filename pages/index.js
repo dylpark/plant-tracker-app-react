@@ -1,4 +1,8 @@
+//
+//
+
 import Head from "next/head";
+import Header from "../components/Header";
 
 export default function Home() {
   return (
@@ -6,7 +10,12 @@ export default function Home() {
       <Head>
         <title>Plant Tracker</title>
       </Head>
-      <header>Time to build Plant Tracker.</header>
+
+      {/* Header/Nav */}
+      <Header />
+
+      {/* Plant Results */}
+
       <footer>Dylan Park, 2021.</footer>
     </div>
   );
