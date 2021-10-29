@@ -1,7 +1,7 @@
 //
 //
 
-const plants = [
+const plantData = [
   {
     id: 1,
     name: "Paddle Plant",
@@ -40,4 +40,4 @@ const plants = [
   },
 ];
 
-export default plants;
+export default plantData;
