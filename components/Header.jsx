@@ -2,18 +2,27 @@
 //
 
 import Image from "next/image";
+import { HomeIcon, PlusCircleIcon } from "@heroicons/react/outline";
+import HeaderItem from "./HeaderItem";
 
 export default function Header() {
   return (
-    <header className="">
-      {/* <div><HeaderItem /></div>
-      <div><HeaderItem /></div> */}
-      <Image
-        className="object-contain"
-        src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-plant-nature-resource-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png"
-        width={60}
-        height={60}
-      />
+    <header className="flex flex-col sm:flex-row m-5 justify-between items-center h-auto">
+      <div className="flex flex-grow justify-start max-w-2xl">
+        <HeaderItem title="Home" Icon={HomeIcon} />
+        <HeaderItem title="Add" Icon={PlusCircleIcon} />
+      </div>
+      <div className="flex flex-grow justify-end max-w-2xl">
+        <h1 className="tracking-widest text-2xl mr-5 text-gray-900">
+          Plant Tracker
+        </h1>
+        <Image
+          className="object-contain"
+          src={require("/public/plant.svg")}
+          width={64}
+          height={64}
+        />
+      </div>
     </header>
   );
 }
