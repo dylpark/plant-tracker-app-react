@@ -13,7 +13,7 @@ function ImageUpload(props) {
       <div className="mt-3">
         <input
           type="file"
-          name="plantImage"
+          name="image"
           required
           accept="image/png, image/jpeg"
           onChange={props.onChange}

@@ -8,14 +8,14 @@ import { useRouter } from "next/router";
 function Form() {
   const router = useRouter();
 
-  const state = {
+  const plant = {
     name: "",
     species: "",
     info: "",
     image: "",
   };
 
-  const handleInput = (e) => {
+  const handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
     });
@@ -23,7 +23,7 @@ function Form() {
 
   const savePlant = async (e) => {
     e.preventDefault();
-    const res = router.post("/api/add-plants", this.state);
+    const res = router.post("/api/add-plants", this.plant);
   };
 
   return (
@@ -46,29 +46,29 @@ function Form() {
               for="Plant Name"
               title="Plant Name"
               name="name"
-              onChange={handleInput}
-              value={state.name}
+              onChange={handleChange}
+              value={plant.name}
             />
             <Input
               for="species"
               title="Species"
               name="species"
-              onChange={handleInput}
-              value={state.species}
+              onChange={handleChange}
+              value={plant.species}
             />
             <Input
               for="Plant Details"
               title="Plant Details & Requirements"
               name="info"
-              onChange={handleInput}
-              value={state.info}
+              onChange={handleChange}
+              value={plant.info}
             />
 
             <ImageUpload
               title="Upload an Image"
               name="image"
-              onChange={handleInput}
-              value={state.image}
+              onChange={handleChange}
+              value={plant.image}
             />
 
             <div>
