@@ -9,10 +9,10 @@ function ImageUpload(props) {
     hiddenFileInput.current.click();
   };
 
-  const handleChange = (event) => {
-    const fileUploaded = event.target.files[0];
-    props.handleFile(fileUploaded);
-  };
+  // const handleChange = (event) => {
+  //   const fileUploaded = event.target.files[0];
+  //   props.handleFile(fileUploaded);
+  // };
 
   return (
     <div>
@@ -32,7 +32,7 @@ function ImageUpload(props) {
         required
         accept="image/png, image/jpeg"
         ref={hiddenFileInput}
-        onChange={handleChange}
+        // onChange={handleChange}
         value={props.value}
         style={{ display: "none" }}
       />
