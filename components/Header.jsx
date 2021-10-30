@@ -9,16 +9,8 @@ function Header() {
   return (
     <header className="flex flex-col sm:flex-row m-5 justify-between items-center h-auto">
       <div className="flex flex-grow justify-start max-w-2xl">
-        <HeaderItem
-          title="Home"
-          Icon={HomeIcon}
-          href="http://localhost:3000/"
-        />
-        <HeaderItem
-          title="Add"
-          Icon={PlusCircleIcon}
-          href="http://localhost:3000/add"
-        />
+        <HeaderItem title="Home" Icon={HomeIcon} href="/" />
+        <HeaderItem title="Add" Icon={PlusCircleIcon} href="/add" />
       </div>
       <div className="flex flex-grow justify-end max-w-2xl">
         <h1 className="tracking-widest text-2xl mr-5 text-gray-900">

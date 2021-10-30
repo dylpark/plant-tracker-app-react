@@ -3,8 +3,29 @@
 import Input from "./Input";
 import ImageUpload from "./ImageUpload";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 function Form() {
+  const router = useRouter();
+
+  const state = {
+    name: "",
+    species: "",
+    info: "",
+    image: "",
+  };
+
+  const handleInput = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const savePlant = async (e) => {
+    e.preventDefault();
+    const res = router.post("/api/add-plants", this.state);
+  };
+
   return (
     <div className="flex flex-col justify-center py-12 px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
@@ -19,35 +40,35 @@ function Form() {
             className="mb-0 space-y-6"
             action="#"
             method="POST"
-            // onSubmit={this.savePlant}
+            onSubmit={savePlant}
           >
             <Input
               for="Plant Name"
               title="Plant Name"
               name="name"
-              // onChange={this.handleInput}
-              // value={this.state.name}
+              onChange={handleInput}
+              value={state.name}
             />
             <Input
               for="species"
               title="Species"
               name="species"
-              // onChange={this.handleInput}
-              // value={this.state.species}
+              onChange={handleInput}
+              value={state.species}
             />
             <Input
               for="Plant Details"
               title="Plant Details & Requirements"
               name="info"
-              // onChange={this.handleInput}
-              // value={this.state.info}
+              onChange={handleInput}
+              value={state.info}
             />
 
             <ImageUpload
               title="Upload an Image"
               name="image"
-              // onChange={this.handleInput}
-              // value={this.state.image}
+              onChange={handleInput}
+              value={state.image}
             />
 
             <div>

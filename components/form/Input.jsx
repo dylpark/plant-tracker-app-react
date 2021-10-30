@@ -12,8 +12,8 @@ function Name(props) {
           type="text"
           name={props.name}
           required
-          // onChange={this.onChange}
-          // value={props.value}
+          onChange={props.onChange}
+          value={props.value}
           className="w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-green-500"
         />
       </div>
