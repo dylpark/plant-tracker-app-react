@@ -4,7 +4,7 @@
 function Name(props) {
   return (
     <div>
-      <label for={props.for} class="block text-sm font-medium text-gray-700">
+      <label for={props.for} class="block text-m font-medium text-gray-700">
         {props.title}
       </label>
       <div className="mt-1">

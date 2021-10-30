@@ -13,7 +13,7 @@ function Header() {
         <HeaderItem title="Add" Icon={PlusCircleIcon} href="/add" />
       </div>
       <div className="flex flex-grow justify-end max-w-2xl">
-        <h1 className="tracking-widest text-2xl mr-5 text-gray-900">
+        <h1 className="tracking-widest mr-5 text-3xl font-bold text-gray-900">
           Plant Tracker
         </h1>
         <Image

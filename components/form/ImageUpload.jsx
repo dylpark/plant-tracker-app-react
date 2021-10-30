@@ -6,7 +6,7 @@ function ImageUpload(props) {
     <div>
       <label
         for="Upload an Image"
-        class="block text-sm font-medium text-gray-700"
+        class="block text-m font-medium text-gray-700"
       >
         Upload an Image
       </label>
