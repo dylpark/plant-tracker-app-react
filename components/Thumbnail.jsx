@@ -16,9 +16,7 @@ function Thumbnail(props) {
           {props.name}
         </h2>
 
-        <h3 className="mt-1 text-base text-gray-600 font-extralight">
-          {props.species}
-        </h3>
+        <h3 className="text-base text-gray-600 font-thin">{props.species}</h3>
 
         <p className="max-w-md text-sm text-gray-900 font-normal">
           {props.info}

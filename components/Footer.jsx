@@ -8,7 +8,7 @@ function Footer() {
   const copyright = `Dylan Park © ${date}`;
 
   return (
-    <footer className="flex flex-col sm:flex-row m-10 justify-between items-center h-auto">
+    <footer className="flex flex-col sm:flex-row m-10 justify-between h-auto">
       <div className="text-xs text-gray-300">
         Icons made by{" "}
         <a href="https://www.freepik.com" title="Freepik">
