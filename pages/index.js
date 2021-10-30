@@ -4,6 +4,7 @@
 import Head from "next/head";
 import Header from "../components/Header";
 import Thumbnail from "../components/Thumbnail";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
       {/* Plant Results */}
       <Thumbnail />
 
-      <footer>Dylan Park, 2021.</footer>
+      <Footer />
     </div>
   );
 }
