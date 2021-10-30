@@ -15,16 +15,15 @@ function Form() {
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white py-8 px-6 shadow rounded-lg sm:px-10">
           <form className="mb-0 space-y-6" action="#" method="POST">
-            <Input for="name" title="Plant Name" id="name" name="name" />
-            <Input for="species" title="Species" id="species" name="species" />
+            <Input for="Plant Name" title="Plant Name" name="name" />
+            <Input for="species" title="Species" name="species" />
             <Input
-              for="info"
+              for="Plant Details"
               title="Plant Details & Requirements"
-              id="info"
               name="info"
             />
 
-            <ImageUpload title="Upload an Image" id="name" name="name" />
+            <ImageUpload title="Upload an Image" name="image" />
 
             <div>
               <button

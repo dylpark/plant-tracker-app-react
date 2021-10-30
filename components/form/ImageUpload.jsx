@@ -13,8 +13,8 @@ function ImageUpload() {
       <div className="mt-3">
         <input
           type="file"
-          id="plantImage"
           name="plantImage"
+          required
           accept="image/png, image/jpeg"
         ></input>
       </div>
