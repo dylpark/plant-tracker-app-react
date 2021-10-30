@@ -1,25 +1,22 @@
-//
-//
-import Image from "next/image";
+import Thumbnail from "./Thumbnail";
+import plantData from "../pages/api/plantData";
 
-function Plants(props) {
+const loadPlants = (plantData) => {
   return (
-    <div className="p-2">
-      <Image layout="responsive" src={props.img} height={1080} width={1920} />
+    <Thumbnail
+      id={plantData.id}
+      name={plantData.name}
+      species={plantData.species}
+      info={plantData.info}
+      img={plantData.imgURL}
+    />
+  );
+};
 
-      <div className="p-2">
-        <h2 className="mt-1 text-lg text-gray-900 font-semibold">
-          {props.name}
-        </h2>
-
-        <h3 className="mt-1 text-base text-gray-600 font-extralight">
-          {props.species}
-        </h3>
-
-        <p className="truncate max-w-md text-sm text-gray-900 font-normal">
-          {props.info}
-        </p>
-      </div>
+function Plants() {
+  return (
+    <div className="px-5 my-10 sm:grid md:grid-cols-2 xl:grid-cols-3 3xl:flex flex-wrap justify-center">
+      {plantData.map(loadPlants)}
     </div>
   );
 }

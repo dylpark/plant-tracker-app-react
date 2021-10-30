@@ -3,7 +3,7 @@
 
 import Head from "next/head";
 import Header from "../components/Header";
-import Thumbnail from "../components/Thumbnail";
+import Plants from "../components/Plants";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
       <Header />
 
       {/* Plant Results */}
-      <Thumbnail />
+      <Plants />
 
       <Footer />
     </div>
