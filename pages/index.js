@@ -11,6 +11,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Plant Tracker</title>
+        <link rel="icon" href="public/favicon.ico" />
       </Head>
 
       {/* Header/Nav */}

@@ -18,7 +18,7 @@ function Header() {
         </h1>
         <Image
           className="object-contain"
-          src={require("/public/plant.svg")}
+          src={require("/public/fern.png")}
           width={64}
           height={64}
         />
