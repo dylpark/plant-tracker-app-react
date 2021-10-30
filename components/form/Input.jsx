@@ -9,6 +9,7 @@ function Name(props) {
       </label>
       <div className="mt-1">
         <input
+          type="text"
           id={props.id}
           name={props.name}
           required

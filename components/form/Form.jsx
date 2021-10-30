@@ -1,6 +1,7 @@
 //
 //
 import Input from "./Input";
+import ImageUpload from "./ImageUpload";
 
 function Form() {
   return (
@@ -22,6 +23,8 @@ function Form() {
               id="info"
               name="info"
             />
+
+            <ImageUpload title="Upload an Image" id="name" name="name" />
 
             <div>
               <button
