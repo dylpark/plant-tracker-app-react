@@ -1,7 +1,7 @@
 //
 //
 
-function ImageUpload() {
+function ImageUpload(props) {
   return (
     <div>
       <label
@@ -16,6 +16,8 @@ function ImageUpload() {
           name="plantImage"
           required
           accept="image/png, image/jpeg"
+          onChange={props.onChange}
+          value={props.value}
         ></input>
       </div>
     </div>

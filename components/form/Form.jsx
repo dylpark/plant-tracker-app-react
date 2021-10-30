@@ -2,6 +2,7 @@
 //
 import Input from "./Input";
 import ImageUpload from "./ImageUpload";
+import { useState } from "react";
 
 function Form() {
   return (
@@ -14,16 +15,40 @@ function Form() {
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white py-8 px-6 shadow rounded-lg sm:px-10">
-          <form className="mb-0 space-y-6" action="#" method="POST">
-            <Input for="Plant Name" title="Plant Name" name="name" />
-            <Input for="species" title="Species" name="species" />
+          <form
+            className="mb-0 space-y-6"
+            action="#"
+            method="POST"
+            // onSubmit={this.savePlant}
+          >
+            <Input
+              for="Plant Name"
+              title="Plant Name"
+              name="name"
+              // onChange={this.handleInput}
+              // value={this.state.name}
+            />
+            <Input
+              for="species"
+              title="Species"
+              name="species"
+              // onChange={this.handleInput}
+              // value={this.state.species}
+            />
             <Input
               for="Plant Details"
               title="Plant Details & Requirements"
               name="info"
+              // onChange={this.handleInput}
+              // value={this.state.info}
             />
 
-            <ImageUpload title="Upload an Image" name="image" />
+            <ImageUpload
+              title="Upload an Image"
+              name="image"
+              // onChange={this.handleInput}
+              // value={this.state.image}
+            />
 
             <div>
               <button

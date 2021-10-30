@@ -17,7 +17,6 @@ function Header() {
         <HeaderItem
           title="Add"
           Icon={PlusCircleIcon}
-          a
           href="http://localhost:3000/add"
         />
       </div>
