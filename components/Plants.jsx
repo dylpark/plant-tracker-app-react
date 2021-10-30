@@ -1,14 +1,14 @@
 import Thumbnail from "./Thumbnail";
-import plantData from "../pages/api/plantData";
+import testPlantData from "../pages/api/testPlantData";
 
-const loadPlants = (plantData) => {
+const loadPlants = (testPlantData) => {
   return (
     <Thumbnail
-      id={plantData.id}
-      name={plantData.name}
-      species={plantData.species}
-      info={plantData.info}
-      img={plantData.imgURL}
+      id={testPlantData.id}
+      name={testPlantData.name}
+      species={testPlantData.species}
+      info={testPlantData.info}
+      img={testPlantData.imgURL}
     />
   );
 };
@@ -16,7 +16,7 @@ const loadPlants = (plantData) => {
 function Plants() {
   return (
     <div className="px-5 my-10 sm:grid md:grid-cols-2 xl:grid-cols-3 3xl:flex flex-wrap justify-center">
-      {plantData.map(loadPlants)}
+      {testPlantData.map(loadPlants)}
     </div>
   );
 }

@@ -19,6 +19,15 @@ function Footer() {
           www.flaticon.com
         </a>
       </div>
+      <div className="text-xs text-gray-300">
+        Plant info by{" "}
+        <a
+          href="https://www.goodhousekeeping.com/home/gardening/advice/g1285/hard-to-kill-plants/"
+          title="Gopod House Keeping"
+        >
+          Good House Keeping
+        </a>{" "}
+      </div>
       <p className="tracking-widest text-xs text-gray-400">{copyright}</p>
     </footer>
   );
