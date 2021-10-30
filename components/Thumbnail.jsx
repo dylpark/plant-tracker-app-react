@@ -1,11 +1,15 @@
 //
 //
-import Image from "next/image";
 
 function Thumbnail(props) {
   return (
     <div className="p-2">
-      <Image layout="responsive" src={props.img} height={1080} width={1920} />
+      <img
+        className="object-cover h-60 w-full"
+        layout="responsive"
+        src={props.img}
+        alt={props.name}
+      />
 
       <div className="p-2">
         <h2 className="mt-1 text-lg text-gray-900 font-semibold">
@@ -16,7 +20,7 @@ function Thumbnail(props) {
           {props.species}
         </h3>
 
-        <p className="truncate max-w-md text-sm text-gray-900 font-normal">
+        <p className="max-w-md text-sm text-gray-900 font-normal">
           {props.info}
         </p>
       </div>
