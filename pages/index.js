@@ -23,7 +23,7 @@ export default function Home() {
   );
 }
 
-// Request to Database
+// Server Side Rendering
 // export async function getServerSideProps(context) {
 //   const plants = context.query.plants;
 // }
