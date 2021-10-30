@@ -3,20 +3,7 @@
 
 import Head from "next/head";
 import Header from "../components/Header";
-import Plants from "../components/Plants";
-import plantData from "./api/plantData";
-
-const loadPlants = (plantData) => {
-  return (
-    <Plants
-      id={plantData.id}
-      name={plantData.name}
-      species={plantData.species}
-      wateringInstructions={plantData.wateringInstructions}
-      img={plantData.imgURL}
-    />
-  );
-};
+import Thumbnail from "../components/Thumbnail";
 
 export default function Home() {
   return (
@@ -29,7 +16,7 @@ export default function Home() {
       <Header />
 
       {/* Plant Results */}
-      <div>{plantData.map(loadPlants)}</div>
+      <Thumbnail />
 
       <footer>Dylan Park, 2021.</footer>
     </div>
