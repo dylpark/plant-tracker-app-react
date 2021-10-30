@@ -8,8 +8,8 @@ function Footer() {
   const copyright = `Dylan Park © ${date}`;
 
   return (
-    <footer className="flex flex-col sm:flex-row m-10 justify-between h-auto">
-      <div className="text-xs text-gray-300">
+    <footer className="flex flex-col justify-end sm:flex-row m-10 h-auto">
+      <div className="text-xs pr-10 text-gray-300">
         Icons made by{" "}
         <a href="https://www.freepik.com" title="Freepik">
           Freepik
@@ -19,7 +19,8 @@ function Footer() {
           www.flaticon.com
         </a>
       </div>
-      <div className="text-xs text-gray-300">
+
+      <div className="text-xs pr-10 text-gray-300">
         Plant info by{" "}
         <a
           href="https://www.goodhousekeeping.com/home/gardening/advice/g1285/hard-to-kill-plants/"
@@ -28,6 +29,7 @@ function Footer() {
           Good House Keeping
         </a>{" "}
       </div>
+
       <p className="tracking-widest text-xs text-gray-400">{copyright}</p>
     </footer>
   );
