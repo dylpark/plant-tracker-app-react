@@ -1,10 +1,10 @@
 import Thumbnail from "./Thumbnail";
 import testPlantData from "../pages/api/testPlantData";
 
-const loadPlants = (testPlantData) => {
+const loadTestPlants = (testPlantData) => {
   return (
     <Thumbnail
-      id={testPlantData.id}
+      key={testPlantData.id}
       name={testPlantData.name}
       species={testPlantData.species}
       info={testPlantData.info}
@@ -13,10 +13,41 @@ const loadPlants = (testPlantData) => {
   );
 };
 
+// const defaultEndpoint = "http://127.0.0.1:8000/api/plants";
+
+// export async function getServerSideProps() {
+//   const res = await fetch(defaultEndpoint);
+//   const data = await res.json();
+//   return {
+//     props: {
+//       data,
+//     },
+//   };
+// }
+
+// const loadPlants = ({ data }) => {
+//   const { results = [] } = data;
+//   {
+//     results.map((result) => {
+//       const { id, name, species, info, image } = result;
+//     });
+//   }
+//   return (
+//     <Thumbnail
+//       key={data.id}
+//       name={data.name}
+//       species={data.species}
+//       info={data.info}
+//       img={data.imgURL}
+//     />
+//   );
+// };
+
 export default function Plants() {
   return (
     <div className="px-5 my-10 sm:grid md:grid-cols-2 xl:grid-cols-3 3xl:flex flex-wrap justify-center">
-      {testPlantData.map(loadPlants)}
+      {testPlantData.map(loadTestPlants)}
+      {/* {data.map(loadPlants)} */}
     </div>
   );
 }

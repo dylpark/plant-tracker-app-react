@@ -3,7 +3,7 @@
 
 export default function Thumbnail(props) {
   return (
-    <div className="p-2">
+    <div key={props.key} className="p-2">
       <img
         className="object-cover h-60 w-full"
         layout="responsive"

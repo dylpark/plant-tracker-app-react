@@ -24,8 +24,3 @@ export default function Home() {
     </div>
   );
 }
-
-// Server Side Rendering
-// export async function getServerSideProps(context) {
-//   const plants = context.query.plants;
-// }
