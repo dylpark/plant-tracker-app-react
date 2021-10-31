@@ -20,7 +20,7 @@ export default function Form() {
     image: "",
   };
 
-  const handleInput = (e) => {
+  const handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
     });
@@ -31,7 +31,7 @@ export default function Form() {
     const res = await axios.post("http://127.0.0.1:8000/api/add-plant", plant);
     if (res.data.status === 200) {
       console.log(res.data.message);
-      setState({
+      this.setState({
         name: "",
         species: "",
         info: "",
@@ -42,7 +42,7 @@ export default function Form() {
 
   const hiddenFileInput = React.useRef(null);
 
-  const handleFile = (event) => {
+  const handleFile = (e) => {
     hiddenFileInput.current.click();
   };
 
@@ -58,7 +58,7 @@ export default function Form() {
         className="mb-0 space-y-6"
         action="#"
         method="POST"
-        onSubmit={this.savePlant}
+        onSubmit={savePlant}
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 bg-white rounded-lg shadow-sm">
           {/* Column 1 */}
@@ -74,7 +74,7 @@ export default function Form() {
                     type="text"
                     name="name"
                     required
-                    onChange={handleInput}
+                    onChange={handleChange}
                     value={plant.name}
                     className="w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-green-500"
                   />
@@ -90,7 +90,7 @@ export default function Form() {
                     type="text"
                     name="species"
                     required
-                    onChange={handleInput}
+                    onChange={handleChange}
                     value={plant.name}
                     className="w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-green-500"
                   />
@@ -143,7 +143,7 @@ export default function Form() {
                   <textarea
                     autofocus
                     value={plant.info}
-                    onChange={handleInput}
+                    onChange={handleChange}
                     className="w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-green-500"
                   />
                 </div>
