@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import MarkdownEditor from "./MarkdownEditor";
 
-function Form() {
+export default function Form() {
   // const router = useRouter();
 
   // const plant = {
@@ -28,21 +28,24 @@ function Form() {
   // };
 
   return (
-    <div className="flex flex-col justify-center py-12 px-6 lg:px-8">
-      <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <h2 className="text-center text-3xl font-bold text-gray-900">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
+      <div class="text-center pb-12">
+        <h1 class="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-gray-900">
           Add Your Plant!
-        </h2>
+        </h1>
       </div>
 
-      <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="bg-white py-8 px-6 shadow rounded-lg sm:px-10">
-          <form
-            className="mb-0 space-y-6"
-            action="#"
-            method="POST"
-            // onSubmit={savePlant}
-          >
+      {/* Column 1 */}
+      <form
+        className="mb-0 space-y-6"
+        action="#"
+        method="POST"
+        // onSubmit={savePlant}
+      />
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col md:flex-row">
+          <div class="w-full md:w-2/5 h-80"></div>
+          <div class="w-full md:w-3/5 text-left p-6 md:p-4 space-y-2">
             <Input
               for="Name"
               title="Name"
@@ -58,28 +61,31 @@ function Form() {
               // value={plant.species}
             />
 
-            <MarkdownEditor title="Details & Requirements" />
+            <div class="flex justify-start space-x-2"></div>
+          </div>
+        </div>
 
+        {/* Column 2 */}
+        <div class="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col md:flex-row">
+          <div class="w-full md:w-2/5 h-80"></div>
+          <div class="w-full md:w-3/5 text-left p-4 md:p-4 space-y-2">
             <ImageUpload
               title="Upload an Image"
               name="image"
               // onChange={handleChange}
               // value={plant.image}
             />
+            <button
+              type="submit"
+              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-800 hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+            >
+              Submit
+            </button>
 
-            <div>
-              <button
-                type="submit"
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-800 hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
-              >
-                Submit
-              </button>
-            </div>
-          </form>
+            <MarkdownEditor title="Details & Requirements" />
+          </div>
         </div>
       </div>
     </div>
   );
 }
-
-export default Form;

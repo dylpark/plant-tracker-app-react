@@ -17,7 +17,7 @@ function MarkdownEditor(props) {
         />
 
         <ReactMarkdown
-          source={markdown}
+          children={markdown}
           className="w-full h-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-green-500"
         />
       </div>
