@@ -2,6 +2,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+App connects to a Laravel JSON API, see https://github.com/dylpark/Plant-Tracker-API
+
+All dev dependencies have been saved.
+
 First, run the development server:
 
 ```bash
