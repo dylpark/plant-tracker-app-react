@@ -44,8 +44,8 @@ function Form() {
             // onSubmit={savePlant}
           >
             <Input
-              for="Plant Name"
-              title="Plant Name"
+              for="Name"
+              title="Name"
               name="name"
               // onChange={handleChange}
               // value={plant.name}
@@ -57,13 +57,8 @@ function Form() {
               // onChange={handleChange}
               // value={plant.species}
             />
-            <Input
-              for="Plant Details"
-              title="Plant Details & Requirements"
-              name="info"
-              // onChange={handleChange}
-              // value={plant.info}
-            />
+
+            <MarkdownEditor title="Details & Requirements" />
 
             <ImageUpload
               title="Upload an Image"
@@ -71,8 +66,6 @@ function Form() {
               // onChange={handleChange}
               // value={plant.image}
             />
-
-            <MarkdownEditor />
 
             <div>
               <button
