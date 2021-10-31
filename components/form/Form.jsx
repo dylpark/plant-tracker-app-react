@@ -42,7 +42,7 @@ export default function Form() {
         method="POST"
         // onSubmit={savePlant}
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 bg-white rounded-lg shadow-lg">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 bg-white rounded-lg shadow-sm">
           {/* Column 1 */}
           <div className="w-full overflow-hidden flex flex-col md:flex-row">
             <div className="w-full md:w-full text-left p-6 md:p-4 space-y-2">
