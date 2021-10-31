@@ -1,7 +1,7 @@
 //
 //
 
-function Thumbnail(props) {
+export default function Thumbnail(props) {
   return (
     <div className="p-2">
       <img
@@ -25,5 +25,3 @@ function Thumbnail(props) {
     </div>
   );
 }
-
-export default Thumbnail;

@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import ReactMarkdown from "react-markdown";
 
-function MarkdownEditor(props) {
+export default function MarkdownEditor(props) {
   const [markdown, setMarkdown] = useState();
 
   return (
@@ -27,5 +27,3 @@ function MarkdownEditor(props) {
     </div>
   );
 }
-
-export default MarkdownEditor;

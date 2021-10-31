@@ -2,7 +2,7 @@
 //
 import Link from "next/link";
 
-function HeaderItem({ Icon, title, href }) {
+export default function HeaderItem({ Icon, title, href }) {
   return (
     <Link href={href}>
       <div className="flex flex-col items-center cursor-pointer group w-12 sm:w-20">
@@ -17,5 +17,3 @@ function HeaderItem({ Icon, title, href }) {
     </Link>
   );
 }
-
-export default HeaderItem;
