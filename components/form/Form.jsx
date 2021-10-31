@@ -28,7 +28,16 @@ export default function Form() {
 
   const savePlant = async (e) => {
     e.preventDefault();
-    const res = await axios.post("/api/add-plant", this.plant);
+    const res = await axios.post("http://127.0.0.1:8000/api/add-plant", plant);
+    if (res.data.status === 200) {
+      console.log(res.data.message);
+      setState({
+        name: "",
+        species: "",
+        info: "",
+        image: "",
+      });
+    }
   };
 
   const hiddenFileInput = React.useRef(null);
@@ -49,7 +58,7 @@ export default function Form() {
         className="mb-0 space-y-6"
         action="#"
         method="POST"
-        onSubmit={savePlant}
+        onSubmit={this.savePlant}
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 bg-white rounded-lg shadow-sm">
           {/* Column 1 */}
