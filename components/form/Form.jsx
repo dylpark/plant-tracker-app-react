@@ -61,7 +61,6 @@ export default function Form() {
                 // value={plant.species}
               />
               <FileUpload />
-              <Button title="Submit" />
             </div>
           </div>
 
@@ -71,6 +70,9 @@ export default function Form() {
               <MarkdownEditor title="Details & Requirements" />
             </div>
           </div>
+        </div>
+        <div className="text-center pb-12">
+          <Button title="Submit" />
         </div>
       </form>
     </div>
