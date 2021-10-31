@@ -1,6 +1,16 @@
+# Plant Tracker App
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+<img width="800" alt="HomePage" src="https://user-images.githubusercontent.com/64296934/139571868-47fe8089-ff1f-4898-aab1-250cb47fd561.png">
+
+<img width="800" alt="AppPlant" src="https://user-images.githubusercontent.com/64296934/139571871-8a50f75c-40d4-4fe3-a369-8dc1e883b2f7.png">
+
 ## Getting Started
+
+App connects to a Laravel JSON API, see https://github.com/dylpark/Plant-Tracker-API
+
+All dev dependencies have been saved.
 
 First, run the development server:
 
