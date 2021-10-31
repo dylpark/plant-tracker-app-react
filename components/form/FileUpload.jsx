@@ -13,17 +13,17 @@ function FileUpload(props) {
   // };
   return (
     <div>
-      <div class="file_upload p-5 relative border-4 border-dotted border-gray-300 rounded-lg">
-        <div class="input_field flex flex-col w-max mx-auto text-center">
+      <div className="p-5 mt-10 relative border-4 border-dotted border-gray-300 rounded-lg">
+        <div className="flex flex-col w-max mx-auto text-center">
           <label>
             <label
               for="Upload an Image"
-              class="block text-m font-thin text-gray-700"
+              className="block text-m font-thin text-gray-700"
             >
               Upload an Image
             </label>
             <input
-              class="text-sm cursor-pointer w-36 hidden"
+              className="text-sm cursor-pointer w-36 hidden"
               type="file"
               name="image"
               required
@@ -32,12 +32,14 @@ function FileUpload(props) {
               // onChange={handleChange}
               //   value={props.value}
             />
-            <div class="text-sm  focus:ring-green-500 bg-green-800 text-white rounded cursor-pointer p-1 px-3 hover:bg-green-500">
+            <div className="text-sm  focus:ring-green-500 bg-green-800 text-white rounded cursor-pointer p-1 px-3 hover:bg-green-500">
               Select
             </div>
           </label>
 
-          <div class="text-sm font-thin text-gray-700">or drop file here</div>
+          <div className="text-sm font-thin text-gray-700">
+            or drop file here
+          </div>
         </div>
       </div>
     </div>

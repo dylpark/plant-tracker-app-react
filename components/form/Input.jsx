@@ -14,7 +14,7 @@ function Name(props) {
           required
           onChange={props.onChange}
           value={props.value}
-          className="border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-green-500"
+          className="w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-green-500"
         />
       </div>
     </div>
