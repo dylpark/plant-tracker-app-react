@@ -12,9 +12,6 @@ import InfoInput from "./InfoInput";
 import Button from "./Button";
 
 export default function Form() {
-  // const [markdown, setMarkdown] = useState();
-  // const router = useRouter();
-
   const plant = {
     name: "",
     species: "",
@@ -40,12 +37,6 @@ export default function Form() {
         image: "",
       });
     }
-  };
-
-  const hiddenFileInput = React.useRef(null);
-
-  const handleFile = (e) => {
-    hiddenFileInput.current.click();
   };
 
   return (
@@ -82,7 +73,7 @@ export default function Form() {
                 onChange={handleChange}
                 value={plant.species}
               />
-              {/* Image Input */}
+              {/* File Input */}
               <FileInput
                 title="Upload an Image"
                 name="image"
@@ -91,7 +82,7 @@ export default function Form() {
             </div>
           </div>
 
-          {/* Column 2 */}
+          {/* Column 2 - Text Area */}
           <div className="w-full overflow-hidden flex flex-col md:flex-row">
             <div className="w-full md:w-full text-left p-4 md:p-4 space-y-2">
               {/* Info Input */}
@@ -103,14 +94,11 @@ export default function Form() {
             </div>
           </div>
         </div>
+
+        {/* Submit Button */}
         <div className="text-center pb-12">
           <div>
-            <button
-              type="submit"
-              className="w-1/3 py-2 px-4 border border-transparent rounded-md shadow-lg text-sm font-medium text-white bg-green-800 hover:bg-green-500"
-            >
-              Submit
-            </button>
+            <Button title="Submit" />
           </div>
         </div>
       </form>
