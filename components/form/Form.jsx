@@ -4,6 +4,7 @@ import Input from "./Input";
 import ImageUpload from "./ImageUpload";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import MarkdownEditor from "./MarkdownEditor";
 
 function Form() {
   // const router = useRouter();
@@ -70,6 +71,8 @@ function Form() {
               // onChange={handleChange}
               // value={plant.image}
             />
+
+            <MarkdownEditor />
 
             <div>
               <button
