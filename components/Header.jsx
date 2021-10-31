@@ -8,7 +8,7 @@ import HeaderItem from "./HeaderItem";
 export default function Header() {
   return (
     <header className="flex flex-col sm:flex-row m-5 justify-between h-auto">
-      <div className="flex flex-grow self-center hoverjustify-start max-w-2xl">
+      <div className="flex flex-grow self-center justify-start max-w-2xl">
         <HeaderItem title="Home" Icon={HomeIcon} href="/" />
         <HeaderItem title="Add" Icon={PlusCircleIcon} href="/add" />
       </div>
