@@ -1,16 +1,17 @@
 //
 //
-import Input from "./Input";
-import { useState } from "react";
-import { useRouter } from "next/router";
+
 import React from "react";
+import { useState } from "react";
+// import { useRouter } from "next/router";
+import axios from "axios";
+// import Input from "./Input";
 // import MarkdownEditor from "./MarkdownEditor";
 // import FileUpload from "./FileUpload";
-import Button from "./Button";
+// import Button from "./Button";
 
 export default function Form() {
-  const router = useRouter();
-  const [markdown, setMarkdown] = useState();
+  // const [markdown, setMarkdown] = useState();
 
   const plant = {
     name: "",
@@ -27,7 +28,7 @@ export default function Form() {
 
   const savePlant = async (e) => {
     e.preventDefault();
-    const res = await router.post("/api/add-plants", this.plant);
+    const res = await axios.post("/api/add-plant", this.plant);
   };
 
   const hiddenFileInput = React.useRef(null);
