@@ -3,6 +3,7 @@
 import Input from "./Input";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import React from "react";
 // import MarkdownEditor from "./MarkdownEditor";
 // import FileUpload from "./FileUpload";
 import Button from "./Button";
@@ -26,7 +27,13 @@ export default function Form() {
 
   const savePlant = async (e) => {
     e.preventDefault();
-    const res = router.post("/api/add-plants", this.plant);
+    const res = await router.post("/api/add-plants", this.plant);
+  };
+
+  const hiddenFileInput = React.useRef(null);
+
+  const handleFile = (event) => {
+    hiddenFileInput.current.click();
   };
 
   return (
@@ -41,7 +48,7 @@ export default function Form() {
         className="mb-0 space-y-6"
         action="#"
         method="POST"
-        // onSubmit={savePlant}
+        onSubmit={savePlant}
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 bg-white rounded-lg shadow-sm">
           {/* Column 1 */}
@@ -95,9 +102,9 @@ export default function Form() {
                         name="image"
                         required
                         accept="image/png, image/jpeg"
-                        //   ref={hiddenFileInput}
-                        // onChange={handleChange}
-                        //   value={props.value}
+                        ref={hiddenFileInput}
+                        onChange={handleFile}
+                        value={plant.image}
                         className="text-sm cursor-pointer w-36 hidden"
                       />
                       <div className="text-sm  focus:ring-green-500 bg-green-800 text-white rounded cursor-pointer p-1 px-3 hover:bg-green-500">
@@ -125,8 +132,8 @@ export default function Form() {
                 <div className="mt-1">
                   <textarea
                     autofocus
-                    value={markdown}
-                    onChange={(e) => setMarkdown(e.target.value)}
+                    value={plant.info}
+                    onChange={handleInput}
                     className="w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-green-500"
                   />
                 </div>
