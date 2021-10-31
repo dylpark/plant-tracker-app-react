@@ -1,10 +1,10 @@
 //
 //
 import Input from "./Input";
-import ImageUpload from "./ImageUpload";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import MarkdownEditor from "./MarkdownEditor";
+import FileUpload from "./FileUpload";
 
 export default function Form() {
   // const router = useRouter();
@@ -60,6 +60,7 @@ export default function Form() {
               // onChange={handleChange}
               // value={plant.species}
             />
+            <FileUpload />
 
             <div class="flex justify-start space-x-2"></div>
           </div>
@@ -69,12 +70,6 @@ export default function Form() {
         <div class="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col md:flex-row">
           <div class="w-full md:w-2/5 h-80"></div>
           <div class="w-full md:w-3/5 text-left p-4 md:p-4 space-y-2">
-            <ImageUpload
-              title="Upload an Image"
-              name="image"
-              // onChange={handleChange}
-              // value={plant.image}
-            />
             <button
               type="submit"
               className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-800 hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
