@@ -1,31 +1,22 @@
 //
 //
 
-function Input(props) {
-  const plant = {
-    name: "",
-    species: "",
-    info: "",
-    img: "",
-  };
-
+export default function TextInput(props) {
   return (
     <div>
       <label for={props.for} class="text-m font-thin text-gray-700">
-        {props.title}
+        {props.name}
       </label>
       <div className="mt-1">
         <input
           type="text"
-          name="name"
+          name={props.name}
           required
-          onChange={this.handleInput}
-          value={this.plant.name}
+          onChange={props.onChange}
+          value={props.value}
           className="w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-green-500"
         />
       </div>
     </div>
   );
 }
-
-export default Input;

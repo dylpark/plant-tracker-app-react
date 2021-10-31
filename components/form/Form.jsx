@@ -3,15 +3,16 @@
 
 import React from "react";
 import { useState } from "react";
-// import { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import axios from "axios";
-// import Input from "./Input";
+import TextInput from "./TextInput";
 // import MarkdownEditor from "./MarkdownEditor";
-// import FileUpload from "./FileUpload";
+import FileInput from "./FileInput";
 // import Button from "./Button";
 
 export default function Form() {
   // const [markdown, setMarkdown] = useState();
+  // const router = useRouter();
 
   const plant = {
     name: "",
@@ -65,37 +66,21 @@ export default function Form() {
           <div className="w-full overflow-hidden flex flex-col md:flex-row">
             <div className="w-full md:w-full text-left p-6 md:p-4 space-y-2">
               {/* Name Input */}
-              <div>
-                <label for="plant name" class="text-m font-thin text-gray-700">
-                  Name
-                </label>
-                <div className="mt-1">
-                  <input
-                    type="text"
-                    name="name"
-                    required
-                    onChange={handleChange}
-                    value={plant.name}
-                    className="w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-green-500"
-                  />
-                </div>
-              </div>
+              <TextInput
+                for="plant name"
+                title="Name"
+                name="name"
+                onChange={handleChange}
+                value={plant.name}
+              />
               {/* Species Input */}
-              <div>
-                <label for="species" class="text-m font-thin text-gray-700">
-                  Species
-                </label>
-                <div className="mt-1">
-                  <input
-                    type="text"
-                    name="species"
-                    required
-                    onChange={handleChange}
-                    value={plant.name}
-                    className="w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-green-500"
-                  />
-                </div>
-              </div>
+              <TextInput
+                for="species name"
+                title="Species"
+                name="species"
+                onChange={handleChange}
+                value={plant.species}
+              />
               {/* Image Input */}
               <div>
                 <div className="p-5 m-10 relative border-4 border-dotted border-gray-300 rounded-lg">

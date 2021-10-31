@@ -1,6 +1,6 @@
 import React from "react";
 
-function FileUpload(props) {
+export default function FileInput(props) {
   const hiddenFileInput = React.useRef(null);
 
   const handleClick = (event) => {
@@ -45,5 +45,3 @@ function FileUpload(props) {
     </div>
   );
 }
-
-export default FileUpload;
