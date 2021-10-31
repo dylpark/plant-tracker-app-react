@@ -5,7 +5,7 @@ export default function TextInput(props) {
   return (
     <div>
       <label for={props.for} class="text-m font-thin text-gray-700">
-        {props.name}
+        {props.title}
       </label>
       <div className="mt-1">
         <input
