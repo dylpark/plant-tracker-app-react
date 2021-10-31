@@ -59,7 +59,7 @@ export default function Form() {
             <div className="w-full md:w-full text-left p-6 md:p-4 space-y-2">
               {/* Name Input */}
               <TextInput
-                for="plant name"
+                htmlFor="plant name"
                 title="Name"
                 name="name"
                 onChange={handleChange}
@@ -67,7 +67,7 @@ export default function Form() {
               />
               {/* Species Input */}
               <TextInput
-                for="species name"
+                htmlFor="species name"
                 title="Species"
                 name="species"
                 onChange={handleChange}

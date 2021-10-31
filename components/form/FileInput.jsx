@@ -18,7 +18,7 @@ export default function FileInput(props) {
         <div className="flex flex-col w-max mx-auto text-center">
           <label>
             <label
-              for="Upload an Image"
+              htmlFor="Upload an Image"
               className="block text-m font-thin text-gray-700"
             >
               {props.title}
