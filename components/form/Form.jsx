@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import MarkdownEditor from "./MarkdownEditor";
 import FileUpload from "./FileUpload";
+import Button from "./Button";
 
 export default function Form() {
   // const router = useRouter();
@@ -41,9 +42,9 @@ export default function Form() {
         method="POST"
         // onSubmit={savePlant}
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 bg-blue-500 rounded-lg shadow-lg">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 bg-white rounded-lg shadow-lg">
           {/* Column 1 */}
-          <div className="w-full bg-green-400 overflow-hidden flex flex-col md:flex-row">
+          <div className="w-full overflow-hidden flex flex-col md:flex-row">
             <div className="w-full md:w-full text-left p-6 md:p-4 space-y-2">
               <Input
                 for="Name"
@@ -60,19 +61,14 @@ export default function Form() {
                 // value={plant.species}
               />
               <FileUpload />
+              <Button title="Submit" />
             </div>
           </div>
 
           {/* Column 2 */}
-          <div className="w-full bg-green-400 overflow-hidden flex flex-col md:flex-row">
+          <div className="w-full overflow-hidden flex flex-col md:flex-row">
             <div className="w-full md:w-full text-left p-4 md:p-4 space-y-2">
               <MarkdownEditor title="Details & Requirements" />
-              <button
-                type="submit"
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-800 hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
-              >
-                Submit
-              </button>
             </div>
           </div>
         </div>

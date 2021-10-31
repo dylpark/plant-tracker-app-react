@@ -13,7 +13,7 @@ function FileUpload(props) {
   // };
   return (
     <div>
-      <div className="p-5 mt-10 relative border-4 border-dotted border-gray-300 rounded-lg">
+      <div className="p-5 m-10 relative border-4 border-dotted border-gray-300 rounded-lg">
         <div className="flex flex-col w-max mx-auto text-center">
           <label>
             <label
