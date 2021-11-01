@@ -24,6 +24,7 @@ export default function Form() {
   };
 
   const savePlant = (e) => {
+    console.log("hello");
     e.preventDefault();
 
     const data = {
@@ -33,21 +34,25 @@ export default function Form() {
       // image: plantInput.image,
     };
 
-    axios.post(`http://localhost:8000/api/add-plant`, data).then((res) => {
-      if (res.data.status === 200) {
-        swal("Success!", res.data.message, "success");
-        setPlant({
-          name: "",
-          species: "",
-          // info: "",
-          // image: "",
-          error_list: [],
-        });
-        history.push("/plants");
-      } else if (res.data.status === 422) {
-        setPlant({ ...plantInput, error_list: res.data.validate_err });
-      }
-    });
+    axios
+      .post(`http://localhost:8000/api/add-plant`, data)
+      .then((res) => {
+        if (res.data.status === 200) {
+          swal("Success!", res.data.message, "success");
+          setPlant({
+            name: "",
+            species: "",
+            // info: "",
+            // image: "",
+            error_list: [],
+          });
+          history.push("/plants");
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+        setPlant({ ...plantInput, error_list: err.response.data.validate_err });
+      });
   };
 
   return (
@@ -82,12 +87,12 @@ export default function Form() {
                 value={plantInput.species}
               />
               {/* File Input */}
-              <FileInput
+              {/* <FileInput
                 title="Upload an Image"
                 key="3"
                 name="image"
                 // value={plantInput.image}
-              />
+              /> */}
             </div>
           </div>
 
