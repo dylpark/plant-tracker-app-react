@@ -66,6 +66,7 @@ export default function Form() {
               {/* Name Input */}
               <TextInput
                 htmlFor="plant name"
+                key="1"
                 title="Name"
                 name="name"
                 onChange={handleChange}
@@ -74,6 +75,7 @@ export default function Form() {
               {/* Species Input */}
               <TextInput
                 htmlFor="species name"
+                key="2"
                 title="Species"
                 name="species"
                 onChange={handleChange}
@@ -82,6 +84,7 @@ export default function Form() {
               {/* File Input */}
               <FileInput
                 title="Upload an Image"
+                key="3"
                 name="image"
                 // value={plantInput.image}
               />
@@ -94,6 +97,7 @@ export default function Form() {
               {/* Info Input */}
               <InfoInput
                 title="Details & Requirements"
+                key="4"
                 value={plantInput.info}
                 onChange={handleChange}
               />
