@@ -12,40 +12,40 @@ import Button from "./Button";
 export default function Form() {
   const [plantInput, setPlant] = useState({
     name: "",
-    course: "",
-    email: "",
-    phone: "",
+    species: "",
+    info: "",
+    // image: "",
     error_list: [],
   });
 
-  const handleInput = (e) => {
+  const handleChange = (e) => {
     e.persist();
     setPlant({ ...plantInput, [e.target.name]: e.target.value });
   };
 
-  const saveStudent = (e) => {
+  const savePlant = (e) => {
     e.preventDefault();
 
     const data = {
       name: plantInput.name,
       species: plantInput.species,
       info: plantInput.info,
-      image: plantInput.image,
+      // image: plantInput.image,
     };
 
-    axios.post(`/api/add-student`, data).then((res) => {
+    axios.post(`/api/add-plant`, data).then((res) => {
       if (res.data.status === 200) {
         swal("Success!", res.data.message, "success");
-        setStudent({
+        setPlant({
           name: "",
-          course: "",
-          email: "",
-          phone: "",
+          species: "",
+          info: "",
+          // image: "",
           error_list: [],
         });
-        history.push("/students");
+        history.push("/plants");
       } else if (res.data.status === 422) {
-        setStudent({ ...studentInput, error_list: res.data.validate_err });
+        setPlant({ ...plantInput, error_list: res.data.validate_err });
       }
     });
   };
@@ -58,12 +58,7 @@ export default function Form() {
         </h1>
       </div>
 
-      <form
-        className="mb-0 space-y-6"
-        action="#"
-        method="POST"
-        // onSubmit={savePlant}
-      >
+      <form className="mb-0 space-y-6" onSubmit={savePlant}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 bg-white rounded-lg shadow-sm">
           {/* Column 1 */}
           <div className="w-full overflow-hidden flex flex-col md:flex-row">
@@ -73,22 +68,22 @@ export default function Form() {
                 htmlFor="plant name"
                 title="Name"
                 name="name"
-                // onChange={handleChange}
-                // value={plant.name}
+                onChange={handleChange}
+                value={plantInput.name}
               />
               {/* Species Input */}
               <TextInput
                 htmlFor="species name"
                 title="Species"
                 name="species"
-                // onChange={handleChange}
-                // value={plant.species}
+                onChange={handleChange}
+                value={plantInput.species}
               />
               {/* File Input */}
               <FileInput
                 title="Upload an Image"
                 name="image"
-                // value={plant.image}
+                // value={plantInput.image}
               />
             </div>
           </div>
@@ -99,8 +94,8 @@ export default function Form() {
               {/* Info Input */}
               <InfoInput
                 title="Details & Requirements"
-                // value={plant.info}
-                // onChange={handleChange}
+                value={plantInput.info}
+                onChange={handleChange}
               />
             </div>
           </div>
