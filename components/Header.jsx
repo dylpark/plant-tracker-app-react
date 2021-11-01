@@ -10,7 +10,7 @@ export default function Header() {
     <header className="flex flex-col sm:flex-row m-5 justify-between h-auto">
       <div className="flex flex-grow self-center justify-start max-w-2xl">
         <HeaderItem title="Home" Icon={HomeIcon} href="/" />
-        <HeaderItem title="Add" Icon={PlusCircleIcon} href="/add" />
+        <HeaderItem title="Add" Icon={PlusCircleIcon} href="/add-plant" />
       </div>
       <div className="flex flex-grow justify-end max-w-2xl">
         <h1 className="tracking-widest self-center mr-5 text-3xl font-thin text-gray-900">
