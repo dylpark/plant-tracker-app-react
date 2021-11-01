@@ -3,41 +3,52 @@
 
 import React from "react";
 import { useState } from "react";
-import { useRouter } from "next/router";
+import axios from "axios";
 import TextInput from "./TextInput";
-// import MarkdownEditor from "./MarkdownEditor";
 import FileInput from "./FileInput";
 import InfoInput from "./InfoInput";
 import Button from "./Button";
 
 export default function Form() {
-  // const plant = {
-  //   name: "",
-  //   species: "",
-  //   info: "",
-  //   image: "",
-  // };
+  const [plantInput, setPlant] = useState({
+    name: "",
+    course: "",
+    email: "",
+    phone: "",
+    error_list: [],
+  });
 
-  // const handleChange = (event) => {
-  //   this.setState({
-  //     [event.target.name]: event.target.value,
-  //   });
-  // };
+  const handleInput = (e) => {
+    e.persist();
+    setPlant({ ...plantInput, [e.target.name]: e.target.value });
+  };
 
-  // const savePlant = async (event) => {
-  //   const router = useRouter();
-  //   event.preventDefault();
-  //   const res = await router.post("http://127.0.0.1:8000/api/add-plant", plant);
-  //   if (res.data.status === 200) {
-  //     console.log(res.data.message);
-  //     this.setState({
-  //       name: "",
-  //       species: "",
-  //       info: "",
-  //       image: "",
-  //     });
-  //   }
-  // };
+  const saveStudent = (e) => {
+    e.preventDefault();
+
+    const data = {
+      name: plantInput.name,
+      species: plantInput.species,
+      info: plantInput.info,
+      image: plantInput.image,
+    };
+
+    axios.post(`/api/add-student`, data).then((res) => {
+      if (res.data.status === 200) {
+        swal("Success!", res.data.message, "success");
+        setStudent({
+          name: "",
+          course: "",
+          email: "",
+          phone: "",
+          error_list: [],
+        });
+        history.push("/students");
+      } else if (res.data.status === 422) {
+        setStudent({ ...studentInput, error_list: res.data.validate_err });
+      }
+    });
+  };
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-10">
