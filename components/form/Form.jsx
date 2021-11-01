@@ -13,7 +13,7 @@ export default function Form() {
   const [plantInput, setPlant] = useState({
     name: "",
     species: "",
-    info: "",
+    // info: "",
     // image: "",
     error_list: [],
   });
@@ -29,7 +29,7 @@ export default function Form() {
     const data = {
       name: plantInput.name,
       species: plantInput.species,
-      info: plantInput.info,
+      // info: plantInput.info,
       // image: plantInput.image,
     };
 
@@ -39,7 +39,7 @@ export default function Form() {
         setPlant({
           name: "",
           species: "",
-          info: "",
+          // info: "",
           // image: "",
           error_list: [],
         });
@@ -99,7 +99,7 @@ export default function Form() {
                 title="Details & Requirements"
                 key="4"
                 // value={plantInput.info}
-                onChange={handleChange}
+                // onChange={handleChange}
               />
             </div>
           </div>
