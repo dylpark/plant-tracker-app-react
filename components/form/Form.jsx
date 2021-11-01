@@ -33,7 +33,7 @@ export default function Form() {
       // image: plantInput.image,
     };
 
-    axios.post(`/api/add-plant`, data).then((res) => {
+    axios.post(`http://localhost:8000/api/add-plant`, data).then((res) => {
       if (res.data.status === 200) {
         swal("Success!", res.data.message, "success");
         setPlant({
@@ -98,7 +98,7 @@ export default function Form() {
               <InfoInput
                 title="Details & Requirements"
                 key="4"
-                value={plantInput.info}
+                // value={plantInput.info}
                 onChange={handleChange}
               />
             </div>
