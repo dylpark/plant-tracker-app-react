@@ -17,6 +17,7 @@ export default function Header() {
           Plant Tracker
         </h1>
         <Image
+          alt="fern"
           className="object-contain"
           src={require("/public/fern.png")}
           width={64}
