@@ -4,7 +4,7 @@ import testPlantData from "../pages/api/testPlantData";
 const loadTestPlants = (testPlantData) => {
   return (
     <Thumbnail
-      id={testPlantData.id}
+      key={testPlantData.id}
       name={testPlantData.name}
       species={testPlantData.species}
       info={testPlantData.info}
