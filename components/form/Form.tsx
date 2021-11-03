@@ -13,15 +13,13 @@ const api = axios.create({
   baseURL: `http://localhost:8000/api`
 })
 
-
-
 const createPlant = async () => {
 
   let res = await api.post('/add-plant', { 
     name: "test",
     species: "test species", 
   }).catch((error) => {
-    console.log(error, 'Not good man'!)
+    console.log(error, 'Not good man')
   })
   console.log(res)
 }
