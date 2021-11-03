@@ -2,7 +2,7 @@
 
 A simple app comprised of a Home page (listing of all plants). Add plant page where users can upload a plant. 
 
-Created with, [Next.js](https://nextjs.org/) and [Tailwind CSS](https://tailwindcss.com/). Connects to a Laravel API. 
+Created with, [Next.js](https://nextjs.org/) and [Tailwind CSS](https://tailwindcss.com/). Connects to a Laravel API (in progress). See [Plant-Tracker-API](https://github.com/dylpark/Plant-Tracker-API/).
 
 ## Frontend preview build deployed on Heroku
 
@@ -14,7 +14,7 @@ https://plant-tracker-app-react.herokuapp.com/
 
 ## Getting Started
 
-Connection to a Laravel JSON API, in progress. See https://github.com/dylpark/Plant-Tracker-API
+Connection to a Laravel JSON API, 
 
 All dev dependencies have been saved.
 
