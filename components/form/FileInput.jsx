@@ -26,7 +26,7 @@ export default function FileInput(props) {
             <input
               type="file"
               name={props.name}
-              required
+              // required
               accept="image/png, image/jpeg"
               ref={hiddenFileInput}
               onChange={handleChange}
