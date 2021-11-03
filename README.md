@@ -16,6 +16,12 @@ Connection to a Laravel JSON API, in progress. See https://github.com/dylpark/Pl
 
 All dev dependencies have been saved.
 
+First, run:
+
+```bash
+npm install
+```
+
 Run the development server:
 
 ```bash
