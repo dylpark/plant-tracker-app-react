@@ -19,7 +19,7 @@ const createPlant = async () => {
     name: "test",
     species: "test species", 
   }).catch((error) => {
-    console.log(error, 'Not good man')
+    console.log(error, 'Not good man'); error_list: error.response.data.validate_err
   })
   console.log(res)
 }
