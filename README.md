@@ -14,8 +14,6 @@ https://plant-tracker-app-react.herokuapp.com/
 
 ## Getting Started
 
-Connection to a Laravel JSON API, 
-
 All dev dependencies have been saved.
 
 First, run:
