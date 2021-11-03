@@ -1,6 +1,6 @@
 # Plant Tracker App
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). A simple app comprised of a Home page (listing of all plants). Add plant page where users can upload a plant. Created with React, NextJs and Tailwind CSS. Connects to a Laravel API. 
 
 ## Frontend preview build deployed on Heroku
 
