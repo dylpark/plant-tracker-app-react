@@ -16,10 +16,11 @@ const api = axios.create({
 const createPlant = async () => {
 
   let res = await api.post('/add-plant', { 
-    name: "test",
-    species: "test species", 
+    name: "",
+    species: "",
+    // info: "",
   }).catch((error) => {
-    console.log(error, 'Not good man'); error_list: error.response.data.validate_err
+    console.log(error, 'Error'); error_list: error.response.data.validate_err
   })
   console.log(res)
 }
@@ -45,8 +46,6 @@ export default function Form() {
                 key="1"
                 title="Name"
                 name="name"
-                // onChange={handleChange}
-                // value={plant.name}
               />
               {/* Species Input */}
               <TextInput
@@ -54,8 +53,6 @@ export default function Form() {
                 key="2"
                 title="Species"
                 name="species"
-                // onChange={handleChange}
-                // value={plant.species}
               />
               {/* File Input */}
               <FileInput
@@ -80,8 +77,6 @@ export default function Form() {
             </div>
           </div>
         </div>
-
-        <button onClick={createPlant}>Create Plant</button>
 
         {/* Submit Button */}
         <div className="text-center pb-12">
