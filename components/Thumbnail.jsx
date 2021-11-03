@@ -1,11 +1,11 @@
 //
 //
-import Image from "next/image";
+// import Image from "next/image";
 
 export default function Thumbnail(props) {
   return (
     <div key={props.id} className="p-2">
-      <Image
+      <img
         className="object-cover h-60 w-full"
         layout="responsive"
         src={props.img}
