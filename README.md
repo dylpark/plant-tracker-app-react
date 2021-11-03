@@ -16,14 +16,14 @@ Connection to a Laravel JSON API, in progress. See https://github.com/dylpark/Pl
 
 All dev dependencies have been saved.
 
-```npm install --only=dev```
+```bash
+npm install --only=dev
+```
 
 Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
