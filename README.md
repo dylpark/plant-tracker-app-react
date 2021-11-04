@@ -4,7 +4,7 @@ A simple app comprised of a Home page (listing of all plants). Add plant page wh
 
 Created with, [Next.js](https://nextjs.org/) and [Tailwind CSS](https://tailwindcss.com/). Connects to a Laravel API (in progress). See [Plant-Tracker-API](https://github.com/dylpark/Plant-Tracker-API/).
 
-## [Heroku Frontend Preview](https://plant-tracker-app-react.herokuapp.com/)
+## [Frontend Preview](https://plant-tracker-app-react.herokuapp.com/)
 
 <img width="800" alt="HomePage" src="https://user-images.githubusercontent.com/64296934/139571868-47fe8089-ff1f-4898-aab1-250cb47fd561.png">
 
