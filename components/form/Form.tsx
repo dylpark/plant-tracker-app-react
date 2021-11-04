@@ -3,27 +3,27 @@
 
 import React from "react";
 // import { useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 import TextInput from "./TextInput";
 import FileInput from "./FileInput";
 import InfoInput from "./InfoInput";
 import Button from "./Button";
 
-const api = axios.create({
-  baseURL: `http://localhost:8000/api`
-})
+// const api = axios.create({
+//   baseURL: `http://localhost:8000/api`
+// })
 
-const createPlant = async () => {
+// const createPlant = async () => {
 
-  let res = await api.post('/add-plant', { 
-    name: "",
-    species: "",
-    // info: "",
-  }).catch((error) => {
-    console.log(error, 'Error'); error_list: error.response.data.validate_err
-  })
-  console.log(res)
-}
+//   let res = await api.post('/add-plant', { 
+//     name: "",
+//     species: "",
+//     // info: "",
+//   }).catch((error) => {
+//     console.log(error, 'Error'); error_list: error.response.data.validate_err
+//   })
+//   console.log(res)
+// }
 
 export default function Form() {
 
@@ -35,7 +35,11 @@ export default function Form() {
         </h1>
       </div>
 
-      <form className="mb-0 space-y-6" action="http://localhost:8000/api/add-plant" method="POST" onSubmit={createPlant}>
+      <form className="mb-0 space-y-6" 
+      // action="http://localhost:8000/api/add-plant" 
+      // method="POST" 
+      // onSubmit={createPlant}
+      >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 bg-white rounded-lg shadow-sm">
           {/* Column 1 */}
           <div className="w-full overflow-hidden flex flex-col md:flex-row">
