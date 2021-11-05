@@ -4,10 +4,10 @@
 import React from "react";
 // import { useState } from "react";
 import axios from "axios";
-import TextInput from "./TextInput";
-import FileInput from "./FileInput";
-import InfoInput from "./InfoInput";
-import Button from "./Button";
+import DetailsTextArea from "./DetailsTextArea";
+import FileUpload from "./FileUpload";
+import BasicInput from "./BasicInput";
+import SubmitBtn from "./SubmitBtn";
 
 const api = axios.create({
   baseURL: `http://localhost:8000/api`
@@ -18,14 +18,14 @@ const createPlant = async () => {
   let res = await api.post('/add-plant', { 
     name: "",
     species: "",
-    // info: "",
+    info: "",
   }).catch((error) => {
     console.log(error, 'Error'); error_list: error.response.data.validate_err
   })
   console.log(res)
 }
 
-export default function Form() {
+const Form: React.FC = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-10">
@@ -45,25 +45,23 @@ export default function Form() {
           <div className="w-full overflow-hidden flex flex-col md:flex-row">
             <div className="w-full md:w-full text-left p-4 md:p-4 space-y-2">
               {/* Name Input */}
-              <TextInput
-                htmlFor="plant name"
+              <BasicInput
                 key="1"
                 title="Name"
                 name="name"
               />
               {/* Species Input */}
-              <TextInput
-                htmlFor="species name"
+              <BasicInput
                 key="2"
                 title="Species"
                 name="species"
               />
               {/* File Input */}
-              <FileInput
-                title="Upload an Image"
+              <FileUpload
                 key="3"
-                name="image"
-                // value={plant.image}
+                // title="Upload an Image"
+                // name="image"
+                // value={image}
               />
             </div>
           </div>
@@ -72,11 +70,9 @@ export default function Form() {
           <div className="w-full overflow-hidden flex flex-col md:flex-row">
             <div className="w-full md:w-full text-left p-4 md:p-4 space-y-2">
               {/* Info Input */}
-              <InfoInput
-                title="Details & Requirements"
+              <DetailsTextArea
                 key="4"
-                // value={plant.info}
-                // onChange={handleChange}
+                onChange={""}
               />
             </div>
           </div>
@@ -85,11 +81,13 @@ export default function Form() {
         {/* Submit Button */}
         <div className="text-center pb-12">
           <div>
-            <Button title="Submit" />
+            <SubmitBtn />
           </div>
         </div>
       </form>
     </div>
   );
 }
+
+export default Form;
 
