@@ -3,7 +3,7 @@
 
 import React from "react";
 
-export default function Footer() {
+const Footer: React.FC = () => {
   const date = new Date().getFullYear();
   const copyright = `Dylan Park © ${date}`;
 
@@ -34,3 +34,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+export default Footer;

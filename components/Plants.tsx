@@ -1,10 +1,10 @@
 import Thumbnail from "./Thumbnail";
 import testPlantData from "../pages/api/testPlantData";
 
-const loadTestPlants = (testPlantData) => {
+const loadTestPlants = (testPlantData: any) => {
   return (
     <Thumbnail
-      key={testPlantData.id}
+      id={testPlantData.id}
       name={testPlantData.name}
       species={testPlantData.species}
       info={testPlantData.info}
@@ -43,7 +43,7 @@ const loadTestPlants = (testPlantData) => {
 //   );
 // };
 
-export default function Plants() {
+const Plants: React.FC = () => {
   return (
     <div className="px-5 my-10 sm:grid md:grid-cols-2 xl:grid-cols-3 3xl:flex flex-wrap justify-center">
       {testPlantData.map(loadTestPlants)}
@@ -51,3 +51,5 @@ export default function Plants() {
     </div>
   );
 }
+
+export default Plants;

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { HomeIcon, PlusCircleIcon } from "@heroicons/react/outline";
 import HeaderItem from "./HeaderItem";
 
-export default function Header() {
+const Header: React.FC = () => { 
   return (
     <header className="flex flex-col sm:flex-row m-5 justify-between h-auto">
       <div className="flex flex-grow self-center justify-start max-w-2xl">
@@ -27,3 +27,5 @@ export default function Header() {
     </header>
   );
 }
+
+export default Header;
