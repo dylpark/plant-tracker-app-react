@@ -2,30 +2,36 @@
 //
 
 import React from "react";
-// import { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import DetailsTextArea from "./DetailsTextArea";
 import FileUpload from "./FileUpload";
 import BasicInput from "./BasicInput";
 import SubmitBtn from "./SubmitBtn";
 
-const api = axios.create({
-  baseURL: `http://localhost:8000/api`
-})
-
-const createPlant = async () => {
-
-  let res = await api.post('/add-plant', { 
-    name: "",
-    species: "",
-    info: "",
-  }).catch((error) => {
-    console.log(error, 'Error'); error_list: error.response.data.validate_err
-  })
-  console.log(res)
-}
-
 const Form: React.FC = () => {
+
+  const [details, setDetails] = useState("");
+
+  const handleChange = ((e: any) => {
+    setDetails(e.target.value)
+  })
+
+  const api = axios.create({
+    baseURL: `http://localhost:8000/api`
+  })
+  
+  const createPlant = async () => {
+  
+    let res = await api.post('/add-plant', { 
+      name: "",
+      species: "",
+      info: {details},
+    }).catch((error) => {
+      console.log(error, 'Error'); error_list: error.response.data.validate_err
+    })
+    console.log(res)
+  }
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-10">
@@ -71,8 +77,9 @@ const Form: React.FC = () => {
             <div className="w-full md:w-full text-left p-4 md:p-4 space-y-2">
               {/* Info Input */}
               <DetailsTextArea
-                key="4"
-                onChange={""}
+                key="4" 
+                value={details} 
+                onChange={handleChange}              
               />
             </div>
           </div>
