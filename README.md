@@ -2,7 +2,7 @@
 
 A plant database app I'm working on. Comprised of a Home page (listing of all plants). Add plant page where users can upload a plant.
 
-Created with, [Next.js](https://nextjs.org/) and [Tailwind CSS](https://tailwindcss.com/). Connects to a Laravel API (in progress). See [Plant-Tracker-API](https://github.com/dylpark/Plant-Tracker-API/). Currrently only POST request for 'Name' and 'Species' are working.
+Created with, [Next.js](https://nextjs.org/) and [Tailwind CSS](https://tailwindcss.com/). Connects to a Laravel API (in progress). See [Plant-Tracker-API](https://github.com/dylpark/Plant-Tracker-API/). Currrently POST request for 'Name' and 'Species' are working.
 
 ## [Preview Build](https://plant-tracker-app-react.herokuapp.com/)
 
